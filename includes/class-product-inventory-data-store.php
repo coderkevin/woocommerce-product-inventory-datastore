@@ -45,7 +45,7 @@ class WC_Product_Inventory_Data_Store
 
 		//$product->set_stock_quantity( 20 );
 
-		$inventory_url = 'http://192.168.200.200:8080/api/inventory/' . $product->get_sku();
+		$inventory_url = 'http://localhost:8080/api/inventory/' . $product->get_sku();
 		$request = wp_remote_get( $inventory_url );
 		$response = wp_remote_retrieve_body( $request );
 		$data = json_decode( $response );
